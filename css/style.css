@@ -1,0 +1,300 @@
+body {
+  font-family: "Raleway";
+  font-size: 14px;
+  background: url(../images/bg-mobile.png) no-repeat;
+  background-size: cover;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin: auto;
+  width: 335px;
+  display: grid;
+  gap: 20px;
+}
+
+.box {
+  background: hsl(228, 56%, 26%);
+  padding: 40px;
+  display: grid;
+  gap: 15px;
+  border-radius: 8px;
+}
+
+.logo {
+  width: 110px;
+}
+
+.logo-box {
+  border-top-right-radius: 100px;
+}
+
+.file-icons {
+  margin-top: 20px;
+}
+.file-icons img {
+  background: hsl(229, 57%, 11%);
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+
+.usage-box {
+  color: hsl(243, 100%, 93%);
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "usage usage" "slider slider" "zero-size full-size";
+}
+
+.usage {
+  grid-area: usage;
+  text-align: center;
+}
+
+.progress-container {
+  grid-area: slider;
+  margin-top: 10px;
+  width: 100%;
+  background: hsl(229, 57%, 11%);
+  border-radius: 20px;
+  padding: 2px;
+}
+.progress-container .progress {
+  height: 12px;
+  line-height: 12px;
+  width: 81.5%;
+  border-radius: 10px;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  font-size: 10px;
+  text-align: right;
+}
+
+.zero-size {
+  grid-area: zero-size;
+  font-weight: bold;
+}
+
+.full-size {
+  grid-area: full-size;
+  text-align: right;
+  font-weight: bold;
+}
+
+.remaining-size {
+  position: relative;
+  top: -50px;
+  left: 80px;
+  z-index: 1000;
+  background: white;
+  padding: 5px;
+  text-align: center;
+  width: 150px;
+  min-height: 30px;
+  align-content: center;
+  border-radius: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.size-figure {
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  text-align: right;
+}
+
+.size-unit {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: hsl(229, 7%, 55%);
+  text-align: left;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 780px) and (max-width: 939px) {
+  body {
+    background: url(../images/bg-desktop.png) no-repeat;
+    background-color: hsl(229, 57%, 11%);
+    background-position-y: bottom;
+  }
+  main {
+    width: 80vw;
+    gap: 20px;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(5, auto);
+    margin-top: 150px;
+  }
+  .box {
+    padding: 40px;
+  }
+  .logo-box {
+    grid-row: 1/span 4;
+  }
+  .usage {
+    text-align: left;
+  }
+  .progress-container {
+    margin-top: 0px;
+  }
+  .usage-box {
+    grid-row: 2/span 3;
+  }
+  .file-icons {
+    margin-top: 0;
+  }
+  .file-icons img {
+    background: hsl(229, 57%, 11%);
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  .size-box {
+    grid-column: 2/span 1;
+    grid-row: 5/span 1;
+  }
+  .remaining-size {
+    top: -200px;
+    left: 160px;
+  }
+  .angled {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid white;
+    top: -220px;
+    left: 300px;
+    z-index: 2000;
+  }
+}
+@media screen and (min-width: 940px) and (max-width: 1199px) {
+  body {
+    background: url(../images/bg-desktop.png) no-repeat;
+    background-color: hsl(229, 57%, 11%);
+    background-position-y: bottom;
+  }
+  main {
+    width: 70vw;
+    gap: 20px;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(5, auto);
+    margin-top: 150px;
+  }
+  .box {
+    padding: 40px;
+  }
+  .logo-box {
+    grid-row: 1/span 4;
+  }
+  .usage {
+    text-align: left;
+  }
+  .progress-container {
+    margin-top: 0px;
+  }
+  .usage-box {
+    grid-row: 2/span 3;
+  }
+  .file-icons {
+    margin-top: 0;
+  }
+  .file-icons img {
+    background: hsl(229, 57%, 11%);
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  .size-box {
+    grid-column: 2/span 1;
+    grid-row: 5/span 1;
+  }
+  .remaining-size {
+    top: -200px;
+    left: 50%;
+  }
+  .angled {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid white;
+    top: -220px;
+    left: calc(50% + 140px);
+    z-index: 2000;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background: url(../images/bg-desktop.png) no-repeat;
+    background-color: hsl(229, 57%, 11%);
+    background-position-y: bottom;
+  }
+  main {
+    width: 60vw;
+    gap: 20px;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(5, auto);
+    margin-top: 150px;
+  }
+  .box {
+    padding: 40px;
+  }
+  .logo-box {
+    grid-row: 1/span 4;
+  }
+  .usage {
+    text-align: left;
+  }
+  .progress-container {
+    margin-top: 0px;
+  }
+  .usage-box {
+    grid-row: 2/span 3;
+  }
+  .file-icons {
+    margin-top: 0;
+  }
+  .file-icons img {
+    background: hsl(229, 57%, 11%);
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  .size-box {
+    grid-column: 2/span 1;
+    grid-row: 5/span 1;
+  }
+  .remaining-size {
+    top: -200px;
+    left: calc(50% + 30px);
+  }
+  .angled {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid white;
+    top: -220px;
+    left: calc(50% + 170px);
+    z-index: 2000;
+  }
+}/*# sourceMappingURL=style.css.map */
